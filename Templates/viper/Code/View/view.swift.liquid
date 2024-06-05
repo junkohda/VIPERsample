@@ -1,0 +1,48 @@
+//
+//  {{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import SwiftUI
+
+struct {{ module_info.name }}View: View {
+    @ObservedObject(initialValue: {{ module_info.name }}ViewModel()) var viewModel: {{ module_info.name }}ViewModel
+    var isDirectlyLoaded: Bool
+
+    var body: some View {
+        NavigationView {
+            VStack {
+                Text("SwiftUI")
+            }
+            .onAppear {
+                UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
+            }
+            .navigationBarTitle(isDirectlyLoaded ? {{ module_info.name }} : "", displayMode: .inline)
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
+        .introspectTabBarController { tabBarController in
+            tabBarController.tabBar.isHidden = false
+        }
+    }
+}
+
+class {{ module_info.name }}ViewModel: ObservableObject {
+    var output: {{ module_info.name }}ViewOutput?
+    
+    init() {}
+}
+
+extension {{ module_info.name }}ViewModel: {{ module_info.name }}ViewInput {
+    func showIndicator() {}
+    func hideIndicator() {}
+    func showLoadingError() {}
+}
+
+struct {{ module_info.name }}View_Previews: PreviewProvider {
+    static var previews: some View {
+        {{ module_info.name }}View(isDirectlyLoaded: true)
+    }
+}

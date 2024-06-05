@@ -1,0 +1,55 @@
+//
+//  {{ prefix }}{{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+@testable import {{ module_info.project_name |  replace: '-', '_' }}
+import XCTest
+
+class {{ module_info.name }}PresenterTest: XCTestCase {
+
+    var presenter: {{ module_info.name }}Presenter!
+    var interactor: MockInteractor!
+    var view: MockViewInput!
+    var router: MockRouter!
+
+    override func setUp() {
+        super.setUp()
+        presenter = {{ module_info.name }}Presenter()
+        interactor = MockInteractor()
+        view = MockViewInput()
+        router = MockRouter()
+
+        interactor.output = presenter
+        presenter.interactor = interactor
+        presenter.view = view
+        presenter.router = router
+    }
+
+    override func tearDown() {
+        super.tearDown()
+    }
+
+    class MockInteractor: {{ module_info.name }}UseCase {
+        var output: {{ module_info.name }}InteractorOutput!
+    }
+
+    class MockRouter: {{ module_info.name }}Wireframe {
+        static func assembleModule() -> UIViewController {
+            return UIViewController()
+        }
+
+        // static func assembleModule() -> {{ module_info.name }}View {
+        //    return {{ module_info.name }}View()
+        // }
+    }
+
+    class MockViewInput: {{ module_info.name }}ViewInput {
+        func showIndicator() {}
+        func hideIndicator() {}
+        func showLoadingError(){}
+    }
+}

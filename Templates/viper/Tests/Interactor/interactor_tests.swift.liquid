@@ -1,0 +1,29 @@
+//
+//  {{ prefix }}{{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+@testable import {{ module_info.project_name |  replace: '-', '_' }}
+import XCTest
+
+class {{ module_info.name }}InteractorTests: XCTestCase {
+    var interactor: {{ module_info.name }}UseCase!
+    var presenter: MockPresenter!
+
+    override func setUp() {
+        super.setUp()
+        presenter = MockPresenter()
+        interactor = {{ module_info.name }}Interactor()
+        interactor.output = presenter
+    }
+
+    override func tearDown() {
+        super.tearDown()
+    }
+
+    class MockPresenter: {{ module_info.name }}InteractorOutput {
+    }
+}

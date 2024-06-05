@@ -1,0 +1,33 @@
+//
+//  {{ prefix }}{{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+@testable import {{ module_info.project_name |  replace: '-', '_' }}
+import XCTest
+
+class {{ module_info.name }}ViewTests: XCTestCase {
+    var viewController: {{ module_info.name }}ViewController!
+    // var viewModel: {{ module_info.name }}ViewModel?
+
+    override func setUp() {
+        super.setUp()
+    }
+
+    override func tearDown() {
+        super.tearDown()
+    }
+
+    class MockPresenter: {{ module_info.name }}Presentation {
+        var startCalled = false
+        func start() {
+            startCalled = true
+        }
+        var view: {{ module_info.name }}ViewInput?
+        var interactor: {{ module_info.name }}UseCase!
+        var router: {{ module_info.name }}Wireframe!
+    }
+}

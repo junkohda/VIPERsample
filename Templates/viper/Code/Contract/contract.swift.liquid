@@ -1,0 +1,36 @@
+//
+//  {{ prefix }}{{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+protocol {{ module_info.name }}ViewInput: AnyObject {
+    func showIndicator()
+    func hideIndicator()
+    func showLoadingError()
+}
+
+protocol {{ module_info.name }}ViewOutput: AnyObject {
+    func start()
+}
+
+protocol {{ module_info.name }}Presentation: AnyObject {
+    var view: {{ module_info.name }}ViewInput? { get set }
+    var interactor: {{ module_info.name }}UseCase! { get set }
+    var router: {{ module_info.name }}Wireframe! { get set }
+}
+
+protocol {{ module_info.name }}UseCase: AnyObject {
+    var output: {{ module_info.name }}InteractorOutput! { get set }
+}
+
+protocol {{ module_info.name }}InteractorOutput: AnyObject {
+}
+
+protocol {{ module_info.name }}Wireframe: AnyObject {
+    static func assembleModule(_ isDirectlyLoaded: Bool) -> {{ module_info.name }}View
+}
