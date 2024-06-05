@@ -9,6 +9,12 @@ xcodeproj_path: VIPERSample.xcodeproj
 # The main project target name
 project_target: VIPERSample
 
+# The file path for new modules
+project_file_path: VIPERSample/Classes/Modules
+
+# The Xcode group path to new modules
+project_group_path: VIPERSample/Classes/Modules
+
 ### Templates
 templates:
 - {name: rviper_controller}
