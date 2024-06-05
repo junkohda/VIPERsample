@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-class {{ module_info.name }}Presenter: {{ module_info.name }}Presentation {
+class {{ module_info.name }}Presenter: NSObject {
     var view: {{ module_info.name }}ViewInput?
     var interactor: {{ module_info.name }}UseCase!
     var router: {{ module_info.name }}Wireframe!

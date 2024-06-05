@@ -32,5 +32,9 @@ protocol {{ module_info.name }}InteractorOutput: AnyObject {
 }
 
 protocol {{ module_info.name }}Wireframe: AnyObject {
-    static func assembleModule(_ isDirectlyLoaded: Bool) -> {{ module_info.name }}View
+    static func assembleModule(_ isDirectlyLoaded: Bool) -> UINavigationController
+}
+
+protocol {{ module_info.name }}DataManagerProtocol {
+    func get(_ page: Int, completion: @escaping (({{ module_info.name }}Response) -> Void), fail: (([String]) -> Void)?)
 }

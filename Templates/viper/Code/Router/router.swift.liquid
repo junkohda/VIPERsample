@@ -17,13 +17,13 @@ class {{ module_info.name }}Router: {{ module_info.name }}Wireframe {
         self.presenter = presenter
     }
 
-    static func assembleModule(isDirectlyLoaded: Bool) -> UINavigationController {
+    static func assembleModule(_ isDirectlyLoaded: Bool) -> UINavigationController {
         let view = {{ module_info.name }}View(isDirectlyLoaded: isDirectlyLoaded)
         let presenter = {{ module_info.name }}Presenter()
         let router = {{ module_info.name }}Router(presenter)
         let interactor = {{ module_info.name }}Interactor(UsageMetricDataManager())
         let hostViewController = UIHostingController(rootView: view)
-        hostViewController.title = {{ module_info.name }}
+        hostViewController.title = "{{ module_info.name }}"
         let navigationController = UINavigationController(rootViewController: hostViewController)
         navigationController.navigationBar.tintColor = .white
 

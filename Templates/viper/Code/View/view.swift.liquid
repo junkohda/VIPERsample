@@ -20,7 +20,7 @@ struct {{ module_info.name }}View: View {
             .onAppear {
                 UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
             }
-            .navigationBarTitle(isDirectlyLoaded ? {{ module_info.name }} : "", displayMode: .inline)
+            .navigationBarTitle(isDirectlyLoaded ? "{{ module_info.name }}" : "", displayMode: .inline)
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .introspectTabBarController { tabBarController in
