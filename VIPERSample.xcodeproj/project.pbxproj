@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		039930E04503ED6D1BBBA7A0 /* TestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC92812A7FE699A2846C449 /* TestRouter.swift */; };
+		19B90DE260371C6D025A56B2 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F288E34758D61B8143D55081 /* TestView.swift */; };
 		5577B60D2C10086100C13B79 /* VIPERSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5577B60C2C10086100C13B79 /* VIPERSampleApp.swift */; };
 		5577B60F2C10086100C13B79 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5577B60E2C10086100C13B79 /* ContentView.swift */; };
 		5577B6112C10086300C13B79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5577B6102C10086300C13B79 /* Assets.xcassets */; };
@@ -14,6 +16,12 @@
 		5577B61E2C10086400C13B79 /* VIPERSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5577B61D2C10086400C13B79 /* VIPERSampleTests.swift */; };
 		5577B6282C10086400C13B79 /* VIPERSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5577B6272C10086400C13B79 /* VIPERSampleUITests.swift */; };
 		5577B62A2C10086400C13B79 /* VIPERSampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5577B6292C10086400C13B79 /* VIPERSampleUITestsLaunchTests.swift */; };
+		5577B65B2C10470700C13B79 /* SwiftUIIntrospect-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 5577B65A2C10470700C13B79 /* SwiftUIIntrospect-Dynamic */; };
+		5577B65D2C10470700C13B79 /* SwiftUIIntrospect-Static in Frameworks */ = {isa = PBXBuildFile; productRef = 5577B65C2C10470700C13B79 /* SwiftUIIntrospect-Static */; };
+		5577B6602C10479C00C13B79 /* SwiftUIIntrospect in Frameworks */ = {isa = PBXBuildFile; productRef = 5577B65F2C10479C00C13B79 /* SwiftUIIntrospect */; };
+		5A4F38288A6D9674E1D1FFF1 /* TestContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA24488A0967FC182A2A602 /* TestContract.swift */; };
+		D4F8776E0B289F3551C44597 /* TestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636A0C8A53C28685E691F6E /* TestInteractor.swift */; };
+		E39FDC803EA6AADE3A8B98F0 /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A3EFE161F1D0945C3881E4 /* TestPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		32A3EFE161F1D0945C3881E4 /* TestPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
 		5577B6092C10086100C13B79 /* VIPERSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VIPERSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5577B60C2C10086100C13B79 /* VIPERSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERSampleApp.swift; sourceTree = "<group>"; };
 		5577B60E2C10086100C13B79 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +53,10 @@
 		5577B6232C10086400C13B79 /* VIPERSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VIPERSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5577B6272C10086400C13B79 /* VIPERSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERSampleUITests.swift; sourceTree = "<group>"; };
 		5577B6292C10086400C13B79 /* VIPERSampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERSampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9636A0C8A53C28685E691F6E /* TestInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TestInteractor.swift; sourceTree = "<group>"; };
+		F288E34758D61B8143D55081 /* TestView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		FAA24488A0967FC182A2A602 /* TestContract.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TestContract.swift; sourceTree = "<group>"; };
+		FBC92812A7FE699A2846C449 /* TestRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TestRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +64,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5577B6602C10479C00C13B79 /* SwiftUIIntrospect in Frameworks */,
+				5577B65B2C10470700C13B79 /* SwiftUIIntrospect-Dynamic in Frameworks */,
+				5577B65D2C10470700C13B79 /* SwiftUIIntrospect-Static in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +87,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1160162F21CE00B69DD2AC2C /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				F30D7D18338E835B85158533 /* Contract */,
+				562A4F0F75B307B344ACBC6F /* Interactor */,
+				55C1F7F6F33FC56D8C4EA778 /* Presenter */,
+				96599847116E316C1FAB34D5 /* Router */,
+				22DBA346332F4EFEAFC844CA /* View */,
+			);
+			name = Test;
+			path = Test;
+			sourceTree = "<group>";
+		};
+		22DBA346332F4EFEAFC844CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F288E34758D61B8143D55081 /* TestView.swift */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
 		5577B6002C10086100C13B79 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +136,7 @@
 				5577B60E2C10086100C13B79 /* ContentView.swift */,
 				5577B6102C10086300C13B79 /* Assets.xcassets */,
 				5577B6122C10086300C13B79 /* Preview Content */,
+				A0D0278C6EE4A546DC6290BA /* Classes */,
 			);
 			path = VIPERSample;
 			sourceTree = "<group>";
@@ -127,6 +166,60 @@
 			path = VIPERSampleUITests;
 			sourceTree = "<group>";
 		};
+		55C1F7F6F33FC56D8C4EA778 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				32A3EFE161F1D0945C3881E4 /* TestPresenter.swift */,
+			);
+			name = Presenter;
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		562A4F0F75B307B344ACBC6F /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				9636A0C8A53C28685E691F6E /* TestInteractor.swift */,
+			);
+			name = Interactor;
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		96599847116E316C1FAB34D5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FBC92812A7FE699A2846C449 /* TestRouter.swift */,
+			);
+			name = Router;
+			path = Router;
+			sourceTree = "<group>";
+		};
+		A0D0278C6EE4A546DC6290BA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AD00F774D29608108B3B596C /* Modules */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		AD00F774D29608108B3B596C /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1160162F21CE00B69DD2AC2C /* Test */,
+			);
+			name = Modules;
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		F30D7D18338E835B85158533 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				FAA24488A0967FC182A2A602 /* TestContract.swift */,
+			);
+			name = Contract;
+			path = Contract;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +236,11 @@
 			dependencies = (
 			);
 			name = VIPERSample;
+			packageProductDependencies = (
+				5577B65A2C10470700C13B79 /* SwiftUIIntrospect-Dynamic */,
+				5577B65C2C10470700C13B79 /* SwiftUIIntrospect-Static */,
+				5577B65F2C10479C00C13B79 /* SwiftUIIntrospect */,
+			);
 			productName = VIPERSample;
 			productReference = 5577B6092C10086100C13B79 /* VIPERSample.app */;
 			productType = "com.apple.product-type.application";
@@ -216,7 +314,7 @@
 			);
 			mainGroup = 5577B6002C10086100C13B79;
 			packageReferences = (
-				5577B63A2C10412400C13B79 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+				5577B65E2C10479C00C13B79 /* XCRemoteSwiftPackageReference "swiftui-introspect" */,
 			);
 			productRefGroup = 5577B60A2C10086100C13B79 /* Products */;
 			projectDirPath = "";
@@ -262,6 +360,11 @@
 			files = (
 				5577B60F2C10086100C13B79 /* ContentView.swift in Sources */,
 				5577B60D2C10086100C13B79 /* VIPERSampleApp.swift in Sources */,
+				5A4F38288A6D9674E1D1FFF1 /* TestContract.swift in Sources */,
+				D4F8776E0B289F3551C44597 /* TestInteractor.swift in Sources */,
+				E39FDC803EA6AADE3A8B98F0 /* TestPresenter.swift in Sources */,
+				039930E04503ED6D1BBBA7A0 /* TestRouter.swift in Sources */,
+				19B90DE260371C6D025A56B2 /* TestView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,15 +690,31 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5577B63A2C10412400C13B79 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+		5577B65E2C10479C00C13B79 /* XCRemoteSwiftPackageReference "swiftui-introspect" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect";
+			repositoryURL = "https://github.com/siteline/swiftui-introspect";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.1.4;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5577B65A2C10470700C13B79 /* SwiftUIIntrospect-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "SwiftUIIntrospect-Dynamic";
+		};
+		5577B65C2C10470700C13B79 /* SwiftUIIntrospect-Static */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "SwiftUIIntrospect-Static";
+		};
+		5577B65F2C10479C00C13B79 /* SwiftUIIntrospect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5577B65E2C10479C00C13B79 /* XCRemoteSwiftPackageReference "swiftui-introspect" */;
+			productName = SwiftUIIntrospect;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5577B6012C10086100C13B79 /* Project object */;
 }

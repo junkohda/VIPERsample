@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import SwiftUIIntrospect
 
 struct {{ module_info.name }}View: View {
     @ObservedObject(initialValue: {{ module_info.name }}ViewModel()) var viewModel: {{ module_info.name }}ViewModel
@@ -23,8 +24,8 @@ struct {{ module_info.name }}View: View {
             .navigationBarTitle(isDirectlyLoaded ? "{{ module_info.name }}" : "", displayMode: .inline)
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        .introspectTabBarController { tabBarController in
-            tabBarController.tabBar.isHidden = false
+        .introspect(.tabView, on: .iOS(.v13, .v14, .v15, .v16, .v17)) { tabView in
+            tabView.tabBar.isHidden = false
         }
     }
 }
