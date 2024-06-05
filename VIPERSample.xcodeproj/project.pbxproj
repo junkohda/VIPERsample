@@ -19,6 +19,11 @@
 		5577B65B2C10470700C13B79 /* SwiftUIIntrospect-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 5577B65A2C10470700C13B79 /* SwiftUIIntrospect-Dynamic */; };
 		5577B65D2C10470700C13B79 /* SwiftUIIntrospect-Static in Frameworks */ = {isa = PBXBuildFile; productRef = 5577B65C2C10470700C13B79 /* SwiftUIIntrospect-Static */; };
 		5577B6602C10479C00C13B79 /* SwiftUIIntrospect in Frameworks */ = {isa = PBXBuildFile; productRef = 5577B65F2C10479C00C13B79 /* SwiftUIIntrospect */; };
+		5577B6682C104C0200C13B79 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5577B6672C104C0200C13B79 /* APIClient.swift */; };
+		5577B66A2C104C3800C13B79 /* TestDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5577B6692C104C3800C13B79 /* TestDataManagerProtocol.swift */; };
+		5577B66C2C104C4400C13B79 /* TestDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5577B66B2C104C4400C13B79 /* TestDataManager.swift */; };
+		5577B66E2C104D0200C13B79 /* TestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5577B66D2C104D0200C13B79 /* TestResponse.swift */; };
+		5577B6712C104DBA00C13B79 /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = 5577B6702C104DBA00C13B79 /* ObjectMapper */; };
 		5A4F38288A6D9674E1D1FFF1 /* TestContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA24488A0967FC182A2A602 /* TestContract.swift */; };
 		D4F8776E0B289F3551C44597 /* TestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636A0C8A53C28685E691F6E /* TestInteractor.swift */; };
 		E39FDC803EA6AADE3A8B98F0 /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A3EFE161F1D0945C3881E4 /* TestPresenter.swift */; };
@@ -53,6 +58,10 @@
 		5577B6232C10086400C13B79 /* VIPERSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VIPERSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5577B6272C10086400C13B79 /* VIPERSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERSampleUITests.swift; sourceTree = "<group>"; };
 		5577B6292C10086400C13B79 /* VIPERSampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERSampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5577B6672C104C0200C13B79 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		5577B6692C104C3800C13B79 /* TestDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataManagerProtocol.swift; sourceTree = "<group>"; };
+		5577B66B2C104C4400C13B79 /* TestDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataManager.swift; sourceTree = "<group>"; };
+		5577B66D2C104D0200C13B79 /* TestResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResponse.swift; sourceTree = "<group>"; };
 		9636A0C8A53C28685E691F6E /* TestInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TestInteractor.swift; sourceTree = "<group>"; };
 		F288E34758D61B8143D55081 /* TestView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		FAA24488A0967FC182A2A602 /* TestContract.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TestContract.swift; sourceTree = "<group>"; };
@@ -64,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5577B6712C104DBA00C13B79 /* ObjectMapper in Frameworks */,
 				5577B6602C10479C00C13B79 /* SwiftUIIntrospect in Frameworks */,
 				5577B65B2C10470700C13B79 /* SwiftUIIntrospect-Dynamic in Frameworks */,
 				5577B65D2C10470700C13B79 /* SwiftUIIntrospect-Static in Frameworks */,
@@ -96,7 +106,6 @@
 				96599847116E316C1FAB34D5 /* Router */,
 				22DBA346332F4EFEAFC844CA /* View */,
 			);
-			name = Test;
 			path = Test;
 			sourceTree = "<group>";
 		};
@@ -105,7 +114,6 @@
 			children = (
 				F288E34758D61B8143D55081 /* TestView.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -166,12 +174,64 @@
 			path = VIPERSampleUITests;
 			sourceTree = "<group>";
 		};
+		5577B6612C104B1A00C13B79 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5577B6622C104B4600C13B79 /* DataManagers */,
+				5577B6632C104B7A00C13B79 /* Entities */,
+			);
+			name = Common;
+			path = VIPERSample/Common;
+			sourceTree = SOURCE_ROOT;
+		};
+		5577B6622C104B4600C13B79 /* DataManagers */ = {
+			isa = PBXGroup;
+			children = (
+				5577B6642C104BA400C13B79 /* Local */,
+				5577B6652C104BB100C13B79 /* Remote */,
+			);
+			path = DataManagers;
+			sourceTree = "<group>";
+		};
+		5577B6632C104B7A00C13B79 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				5577B66D2C104D0200C13B79 /* TestResponse.swift */,
+			);
+			name = Entities;
+			path = VIPERSample/Common/Entities;
+			sourceTree = SOURCE_ROOT;
+		};
+		5577B6642C104BA400C13B79 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		5577B6652C104BB100C13B79 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				5577B6662C104BD500C13B79 /* API */,
+				5577B6692C104C3800C13B79 /* TestDataManagerProtocol.swift */,
+				5577B66B2C104C4400C13B79 /* TestDataManager.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		5577B6662C104BD500C13B79 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				5577B6672C104C0200C13B79 /* APIClient.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		55C1F7F6F33FC56D8C4EA778 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
 				32A3EFE161F1D0945C3881E4 /* TestPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -180,7 +240,6 @@
 			children = (
 				9636A0C8A53C28685E691F6E /* TestInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -189,16 +248,15 @@
 			children = (
 				FBC92812A7FE699A2846C449 /* TestRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
 		A0D0278C6EE4A546DC6290BA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5577B6612C104B1A00C13B79 /* Common */,
 				AD00F774D29608108B3B596C /* Modules */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -207,7 +265,6 @@
 			children = (
 				1160162F21CE00B69DD2AC2C /* Test */,
 			);
-			name = Modules;
 			path = Modules;
 			sourceTree = "<group>";
 		};
@@ -216,7 +273,6 @@
 			children = (
 				FAA24488A0967FC182A2A602 /* TestContract.swift */,
 			);
-			name = Contract;
 			path = Contract;
 			sourceTree = "<group>";
 		};
@@ -240,6 +296,7 @@
 				5577B65A2C10470700C13B79 /* SwiftUIIntrospect-Dynamic */,
 				5577B65C2C10470700C13B79 /* SwiftUIIntrospect-Static */,
 				5577B65F2C10479C00C13B79 /* SwiftUIIntrospect */,
+				5577B6702C104DBA00C13B79 /* ObjectMapper */,
 			);
 			productName = VIPERSample;
 			productReference = 5577B6092C10086100C13B79 /* VIPERSample.app */;
@@ -315,6 +372,7 @@
 			mainGroup = 5577B6002C10086100C13B79;
 			packageReferences = (
 				5577B65E2C10479C00C13B79 /* XCRemoteSwiftPackageReference "swiftui-introspect" */,
+				5577B66F2C104D4B00C13B79 /* XCRemoteSwiftPackageReference "ObjectMapper" */,
 			);
 			productRefGroup = 5577B60A2C10086100C13B79 /* Products */;
 			projectDirPath = "";
@@ -361,7 +419,11 @@
 				5577B60F2C10086100C13B79 /* ContentView.swift in Sources */,
 				5577B60D2C10086100C13B79 /* VIPERSampleApp.swift in Sources */,
 				5A4F38288A6D9674E1D1FFF1 /* TestContract.swift in Sources */,
+				5577B6682C104C0200C13B79 /* APIClient.swift in Sources */,
 				D4F8776E0B289F3551C44597 /* TestInteractor.swift in Sources */,
+				5577B66E2C104D0200C13B79 /* TestResponse.swift in Sources */,
+				5577B66C2C104C4400C13B79 /* TestDataManager.swift in Sources */,
+				5577B66A2C104C3800C13B79 /* TestDataManagerProtocol.swift in Sources */,
 				E39FDC803EA6AADE3A8B98F0 /* TestPresenter.swift in Sources */,
 				039930E04503ED6D1BBBA7A0 /* TestRouter.swift in Sources */,
 				19B90DE260371C6D025A56B2 /* TestView.swift in Sources */,
@@ -698,6 +760,14 @@
 				minimumVersion = 1.1.4;
 			};
 		};
+		5577B66F2C104D4B00C13B79 /* XCRemoteSwiftPackageReference "ObjectMapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tristanhimmelman/ObjectMapper.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -713,6 +783,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5577B65E2C10479C00C13B79 /* XCRemoteSwiftPackageReference "swiftui-introspect" */;
 			productName = SwiftUIIntrospect;
+		};
+		5577B6702C104DBA00C13B79 /* ObjectMapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5577B66F2C104D4B00C13B79 /* XCRemoteSwiftPackageReference "ObjectMapper" */;
+			productName = ObjectMapper;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

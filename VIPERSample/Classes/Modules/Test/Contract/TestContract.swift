@@ -35,6 +35,3 @@ protocol TestWireframe: AnyObject {
     static func assembleModule(_ isDirectlyLoaded: Bool) -> UINavigationController
 }
 
-protocol TestDataManagerProtocol {
-    func get(_ page: Int, completion: @escaping ((TestResponse) -> Void), fail: (([String]) -> Void)?)
-}

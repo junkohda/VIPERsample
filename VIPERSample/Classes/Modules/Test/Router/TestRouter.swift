@@ -21,7 +21,7 @@ class TestRouter: TestWireframe {
         let view = TestView(isDirectlyLoaded: isDirectlyLoaded)
         let presenter = TestPresenter()
         let router = TestRouter(presenter)
-        let interactor = TestInteractor(UsageMetricDataManager())
+        let interactor = TestInteractor(TestDataManager())
         let hostViewController = UIHostingController(rootView: view)
         hostViewController.title = "Test"
         let navigationController = UINavigationController(rootViewController: hostViewController)
